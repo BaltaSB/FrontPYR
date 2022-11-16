@@ -27,7 +27,7 @@ export class LoginService {
    setLocalStorage(data: string):void {
     localStorage.setItem('token', data);
    }
-
+   
    getTokenDecoded(): any{
     const helper = new JwtHelperService(); 
     const token = localStorage.getItem('token') ?? ''
