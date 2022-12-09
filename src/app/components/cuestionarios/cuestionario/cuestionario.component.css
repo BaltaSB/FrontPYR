@@ -1,0 +1,11 @@
+.material-symbols-outlined{
+    float:right;
+    color:#17a2b0;
+    font-size: 25px;
+    margin-left: -25px;
+}
+
+.list-group-item{
+    padding: .20rem;
+    padding-left: 20px;
+}

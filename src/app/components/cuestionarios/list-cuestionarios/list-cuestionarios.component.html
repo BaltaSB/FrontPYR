@@ -1,0 +1,13 @@
+<div class="row">
+  <div class=" col-xs-12 col-sm-12 col-lg-4 col-mb-4 col-xl-3 mb-2" *ngFor="let cuestionario of cuestionarios">
+<div class="card text-center"  >
+  <div class="card-body">
+    <h4 class="card-title">{{cuestionario.nombre}}</h4>
+    <p class="card-text">{{cuestionario.descripcion}} </p>
+    <button class="btn btn-success btn-block btn-cuest" routerLink="/dashboard/cuestionario/{{cuestionario.id}}">VER</button>
+    <button class="btn btn-danger btn-block btn-cuest m-2" (click)="eliminarCuestionario(cuestionario.nombre, cuestionario.id)">ELIMINAR</button>
+  </div>
+</div>
+
+  </div>
+</div>

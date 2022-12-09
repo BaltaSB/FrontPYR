@@ -37,9 +37,9 @@ export class RegisterComponent implements OnInit {
 
     if (!this.register.invalid){
     const usuarioDatos: Usuario = {
-      NombreUsuario: this.register.value.usuario,
-      Email: this.register.value.email,
-      Password: this.register.value.password
+      nombreUsuario: this.register.value.usuario,
+      email: this.register.value.email,
+      password: this.register.value.password
     }
 
     this.usuarioService.saveUser(usuarioDatos).subscribe(data => {

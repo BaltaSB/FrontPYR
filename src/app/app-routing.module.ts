@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BienvenidaComponent } from './components/inicio/bienvenida/bienvenida.component';
 import { RegisterComponent } from './components/inicio/register/register.component';
@@ -7,6 +7,20 @@ import { LoginComponent } from './components/inicio/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CuestionariosComponent } from './components/dashboard/cuestionarios/cuestionarios.component';
 import { CambiarPasswordComponent } from './components/dashboard/cambiar-password/cambiar-password.component';
+import { NuevoCuestionarioComponent } from './components/cuestionarios/nuevo-cuestionario/nuevo-cuestionario.component';
+import { PasoUnoComponent } from './components/cuestionarios/nuevo-cuestionario/paso-uno/paso-uno.component';
+import { PasoDosComponent } from './components/cuestionarios/nuevo-cuestionario/paso-dos/paso-dos.component';
+import { AuthGuard } from './guards/auth.guard';
+import { CuestionarioComponent } from './components/cuestionarios/cuestionario/cuestionario.component';
+import { ListCuestionarios2Component } from './components/inicio/list-cuestionarios2/list-cuestionarios2.component';
+import { IngresarNombreComponent } from './components/inicio/ingresar-nombre/ingresar-nombre.component';
+import { PreguntaComponent } from './components/inicio/pregunta/pregunta.component';
+import { RespuestaCuestrionarioComponent } from './components/inicio/respuesta-cuestrionario/respuesta-cuestrionario.component';
+
+
+
+
+
 
 // Agregamos las rutas necesarias como se muestra
 const routes: Routes = [
@@ -15,12 +29,23 @@ const routes: Routes = [
     {path: '', component:  BienvenidaComponent},
     {path: 'register', component: RegisterComponent },
     {path: 'login', component:  LoginComponent},
+    {path: 'listCuestionarios', component: ListCuestionarios2Component},
+    {path: 'ingresarNombre' , component: IngresarNombreComponent},
+    {path: 'pregunta' , component: PreguntaComponent},
+    {path: 'respuestaCuestionario' , component: RespuestaCuestrionarioComponent}
   ]},
-  {path: 'dashboard', component: DashboardComponent, children: [
+  {path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard], children: [
     {path: '', component:  CuestionariosComponent},
     {path: 'cambiarPassword', component: CambiarPasswordComponent },
+    {path:'cuestionario/:idCuestionario', component: CuestionarioComponent},
+    {path: 'nuevoCuestionario', component: NuevoCuestionarioComponent, children:[
+      {path: 'pasoUno', component: PasoUnoComponent},
+      {path: 'pasoDos', component: PasoDosComponent}
+
+    ]}
+    
   ]},
-  {path: '**', pathMatch:'full', redirectTo: '/bienvenidos' },  //cuando ninguna ruta coincida que la redireccione a este
+  {path: '**', pathMatch:'full', redirectTo: '/inicio' },  //cuando ninguna ruta coincida que la redireccione a este
 ];
 
 @NgModule({

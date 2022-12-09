@@ -1,0 +1,22 @@
+<h1 class="text-center">{{cuestionario.nombre}}</h1>
+<h3 class="text-center">{{cuestionario.descripcion}}</h3>
+
+<div class="card text-center mb-2" *ngFor="let pregunta of cuestionario.listPreguntas">
+    <div class="card-header">
+      <strong>{{pregunta.descripcion}}</strong>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"  [ngClass]="{ 'list-group-item-success' : respuesta.esCorrecta == true }" *ngFor="let respuesta of pregunta.listRespuestas">
+        {{respuesta.descripcion}}
+        <span class="material-symbols-outlined text-right" *ngIf="respuesta.esCorrecta == true">check_circle</span>
+    </li>
+
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 offset-lg-4 d-grid gap-2">
+        <button class="btn btn-info btn-lg btn-block" routerLink="/dashboard" >
+            Volver
+        </button>
+    </div>
+  </div>

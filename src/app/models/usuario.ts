@@ -1,5 +1,5 @@
 export class Usuario{
-    NombreUsuario:string = '';
-    Email: string = "";
-    Password:string = '';
+    nombreUsuario:string = '';
+    email: string = "";
+    password:string = '';
 }

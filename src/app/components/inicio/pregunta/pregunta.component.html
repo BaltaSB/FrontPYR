@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="card text-center" >
+        <app-login *ngIf="loading"></app-login>
+        <div *ngIf="listPreguntas.length > 0">
+            <h4 class="card-title">{{obtenerPregunta()}}</h4>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let respuesta of listPreguntas[getIndex()].listRespuestas" (click)="respuestaSeleccionada(respuesta, respuesta.id)" [ngClass]="AddClassOption(respuesta)">
+                    {{respuesta.descripcion}}
+                </li>
+            </ul>
+            <div class="mt-aout">
+                <button class="btn btn-primary btn-lg btn-slg" [disabled] = "rtaConfirmada == false" (click)="siguiente()">SIGUIENTE</button>
+            </div>
+        </div>
+    </div>
+</div>

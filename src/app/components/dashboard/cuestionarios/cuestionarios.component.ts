@@ -14,7 +14,7 @@ export class CuestionariosComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.getNombreUsuario();
+    // this.getNombreUsuario();
   }
 
   getNombreUsuario(){

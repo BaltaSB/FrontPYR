@@ -1,11 +1,17 @@
+
 <div class="p-5 mb-4 bg-light rounded-3">
     <div class="container-fluid py-5 text-center">
         <h2>Bienvenido {{nombreUsuario}}</h2>
         <p class="lead text-muted">CUESTIONARIOS</p>
         <div class="col-lg-6 offset-lg-3">
-            <button class="btn btn-success btn-block btn-cuest">
+            <button class="btn btn-success btn-block btn-cuest" 
+                    routerLink="/dashboard/nuevoCuestionario/pasoUno">
                 NUEVO CUESTIONARIO
             </button>
         </div>
     </div>
+</div>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+    <app-list-cuestionarios></app-list-cuestionarios>
 </div>
