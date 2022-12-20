@@ -32,9 +32,9 @@ import { PasoUnoComponent } from './components/cuestionarios/nuevo-cuestionario/
 import { ListCuestionariosComponent } from './components/cuestionarios/list-cuestionarios/list-cuestionarios.component';
 import { CuestionarioComponent } from './components/cuestionarios/cuestionario/cuestionario.component';
 import { ListCuestionarios2Component } from './components/inicio/list-cuestionarios2/list-cuestionarios2.component';
-import { IngresarNombreComponent } from './components/inicio/ingresar-nombre/ingresar-nombre.component';
-import { PreguntaComponent } from './components/inicio/pregunta/pregunta.component';
-import { RespuestaCuestrionarioComponent } from './components/inicio/respuesta-cuestrionario/respuesta-cuestrionario.component';
+import { IngresarNombreComponent } from './components/inicio/list-cuestionarios2/ingresar-nombre/ingresar-nombre.component';
+import { PreguntaComponent } from './components/inicio/list-cuestionarios2/pregunta/pregunta.component';
+import { RespuestaCuestrionarioComponent } from './components/inicio/list-cuestionarios2/respuesta-cuestrionario/respuesta-cuestrionario.component';
 
 
 

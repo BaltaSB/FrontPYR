@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { RespuestaCuestionarioService } from '../../../services/respuesta-cuestionario.service';
+import { RespuestaCuestionarioService } from '../../../../services/respuesta-cuestionario.service';
 import { CuestionarioService } from 'src/app/services/cuestionario.service';
 import { Router } from '@angular/router';
-import { Pregunta } from '../../../models/pregunta';
-import { ListPregunta } from '../../../models/cuestionarioById';
+import { Pregunta } from '../../../../models/pregunta';
+import { ListPregunta } from '../../../../models/cuestionarioById';
 
 
 @Component({
@@ -33,6 +33,7 @@ export class PreguntaComponent implements OnInit {
 
   ngOnInit(): void {
     this.idCuestionario = this.respuestaCuestionarioService.idCuestionario;
+    console.log(this.idCuestionario);
     if (this.idCuestionario == 0 || this.idCuestionario == null){
       this.router.navigate(['/inicio'])
       return;
@@ -42,7 +43,7 @@ export class PreguntaComponent implements OnInit {
     // console.log(this.respuestaCuestionarioService.idCuestionario);
   }
 
-  getCuestionario():void{
+  getCuestionario(): void{
   
   this.loading = true;
   this.cuestionarioService.recuperarCuestionarioResponder(this.idCuestionario).subscribe( data => {

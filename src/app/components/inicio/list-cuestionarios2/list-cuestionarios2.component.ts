@@ -29,7 +29,6 @@ export class ListCuestionarios2Component implements OnInit {
     this.cuestionarioService.listadoCuestionarios().subscribe(data => {
       
       this.cuestionarios = data;
-      console.log(this.cuestionarios);
       this.loading = false;
     },error => {
       this.loading = false;

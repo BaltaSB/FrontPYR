@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('login');
   }
 
   //agregamos esta funcion que va a ser 

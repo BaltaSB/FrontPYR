@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { CuestionarioService } from '../../../services/cuestionario.service';
-import { Cuestionario } from '../../../models/cuestionario';
-import { RespuestaCuestionarioService } from '../../../services/respuesta-cuestionario.service';
-import { Pregunta } from '../../../models/pregunta';
+import { CuestionarioService } from '../../../../services/cuestionario.service';
+import { Cuestionario } from '../../../../models/cuestionario';
+import { RespuestaCuestionarioService } from '../../../../services/respuesta-cuestionario.service';
+import { Pregunta } from '../../../../models/pregunta';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,10 +23,12 @@ export class RespuestaCuestrionarioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.respuestaCuestionarioService.idCuestionario);
     if (this.respuestaCuestionarioService.idCuestionario == null || this.respuestaCuestionarioService.idCuestionario == 0){
       this.router.navigate(['/inicio']);
     }else{
       this.cuestionario = this.respuestaCuestionarioService.cuestionario;
+      this.listPreguntas = this.cuestionario.listPreguntas;
       this.respuestaUsuario = this.respuestaCuestionarioService.respuestas;
       console.log(this.cuestionario);
       console.log(this.respuestaUsuario);

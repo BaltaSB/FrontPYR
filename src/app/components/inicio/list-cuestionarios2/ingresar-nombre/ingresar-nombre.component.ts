@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RespuestaCuestionarioService } from '../../../services/respuesta-cuestionario.service';
+import { RespuestaCuestionarioService } from '../../../../services/respuesta-cuestionario.service';
 
 @Component({
   selector: 'app-ingresar-nombre',
@@ -24,6 +24,7 @@ export class IngresarNombreComponent implements OnInit {
 
   siguiente(){
     this.respuestaCuestionarioService.nombreParticipante = this.nombreParticipante;
+    // this.router.navigate(['/inicio/listCuestionarios']);
     this.router.navigate(['/inicio/pregunta']);
   }
 }
