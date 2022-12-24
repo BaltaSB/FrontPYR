@@ -39,7 +39,8 @@ export class ListCuestionarios2Component implements OnInit {
   ingresarNombre(idCuestionario: number = 0): void{
     //Compartimos datos entre los componentes usando el servicio en lugar de un @Input u @Output
     this.respuestaCuestionario.idCuestionario = idCuestionario;
-    this.router.navigate(['/inicio/ingresarNombre']);
+    console.log('object');
+    this.router.navigate(['/inicio/listCuestionarios/ingresarNombre']);
   }
 
 

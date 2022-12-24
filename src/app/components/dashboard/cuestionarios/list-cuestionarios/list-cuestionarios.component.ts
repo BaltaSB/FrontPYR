@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CuestionarioService } from '../../../services/cuestionario.service';
-import { Cuestionario } from '../../../models/cuestionario';
+import { CuestionarioService } from '../../../../services/cuestionario.service';
+import { Cuestionario } from '../../../../models/cuestionario';
 import Swal from 'sweetalert2'
 
 @Component({

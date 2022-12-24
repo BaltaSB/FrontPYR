@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CuestionarioService } from '../../../../services/cuestionario.service';
+import { CuestionarioService } from '../../../../../services/cuestionario.service';
 
 @Component({
   selector: 'app-paso-uno',

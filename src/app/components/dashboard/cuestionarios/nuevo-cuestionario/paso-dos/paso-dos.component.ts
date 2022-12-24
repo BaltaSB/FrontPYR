@@ -1,9 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { CuestionarioService } from '../../../../services/cuestionario.service';
-import { Pregunta } from '../../../../models/pregunta';
+
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { Cuestionario } from '../../../../models/cuestionario';
+import { CuestionarioService } from '../../../../../services/cuestionario.service';
+import { Pregunta } from '../../../../../models/pregunta';
+import { Cuestionario } from '../../../../../models/cuestionario';
 
 
 

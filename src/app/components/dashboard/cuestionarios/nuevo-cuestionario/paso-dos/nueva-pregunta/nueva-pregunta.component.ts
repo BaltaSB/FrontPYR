@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
-import { Pregunta } from '../../../../../models/pregunta';
+import { Pregunta } from '../../../../../../models/pregunta';
 import { ToastrService } from 'ngx-toastr';
-import { Respuesta } from '../../../../../models/respuesta';
+import { Respuesta } from '../../../../../../models/respuesta';
 
 @Component({
   selector: 'app-nueva-pregunta',

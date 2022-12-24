@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RespuestaCuestionarioService } from '../../../../services/respuesta-cuestionario.service';
 
+
 @Component({
   selector: 'app-ingresar-nombre',
   templateUrl: './ingresar-nombre.component.html',
@@ -14,9 +15,11 @@ export class IngresarNombreComponent implements OnInit {
   constructor(private router: Router,
     private respuestaCuestionarioService: RespuestaCuestionarioService) { 
     this.nombreParticipante = '';
+    console.log('ingresar nombre');
   }
 
   ngOnInit(): void {
+    console.log('ingresar nombre');
     if (this.respuestaCuestionarioService.idCuestionario == null || this.respuestaCuestionarioService.idCuestionario == 0){
       this.router.navigate(['/inicio'])
     }

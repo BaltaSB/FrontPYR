@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { CuestionarioService } from '../../../services/cuestionario.service';
-import { Pregunta } from '../../../models/pregunta';
+import { CuestionarioService } from '../../../../services/cuestionario.service';
+import { Pregunta } from '../../../../models/pregunta';
 
 import { ActivatedRoute, Params } from '@angular/router';
-import { CuestionarioById } from '../../../models/cuestionarioById';
+import { CuestionarioById } from '../../../../models/cuestionarioById';
 
 @Component({
   selector: 'app-cuestionario',
