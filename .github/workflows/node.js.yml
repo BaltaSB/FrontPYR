@@ -15,6 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set up Node.js version
+        uses: actions/setup-node@v4.0.1
+        with:
+          node-version: ‘12.x’
       - name: npm install and build webpack
         run: |
           npm install
