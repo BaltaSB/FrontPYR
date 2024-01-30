@@ -15,21 +15,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Node.js version
-        uses: actions/setup-node@v4.0.1
-        with:
-          node-version: 16
-          cache: 'npm'
       - name: npm install and build webpack
         run: |
           npm install
           npm run build
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v4.0.0
-        with:
-          name: web-artifact
-          path: path/to/artifact/
-          if-no-files-found: error
+      #- name: Upload a Build Artifact
+      #  uses: actions/upload-artifact@v4.0.0
+      #  with:
+      #    name: web-artifact
+      #    path: path/to/artifact/
+      #    if-no-files-found: error
 
   test:
     runs-on: ubuntu-latest
@@ -43,11 +38,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v4
-      with:
-        name: web-artifact
-        path: public
+    #- name: Download a Build Artifact
+    #  uses: actions/download-artifact@v4
+    #  with:
+    #    name: web-artifact
+    #    path: public
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
